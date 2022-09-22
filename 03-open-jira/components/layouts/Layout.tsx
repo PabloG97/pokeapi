@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import { FC } from 'react'
-import { Box } from '@mui/material'
 import Head from 'next/head'
 import Navbar from '../ui/Navbar';
 import { Sidebar } from '../ui';
+import { Box } from '@mui/material'
+import { UIContext } from '../../context/ui';
+
 
 
 interface Props {
@@ -10,6 +13,9 @@ interface Props {
     children: React.ReactNode;
 };
 const Layout:FC<Props> = ({ title = 'OpenJira', children }) => {
+
+  const { sidemenuOpen } = useContext(UIContext);
+
   return (
     <Box sx={{ flexFlow: 1 }}>
         <Head>
