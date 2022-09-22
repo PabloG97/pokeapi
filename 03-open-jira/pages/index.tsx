@@ -1,12 +1,33 @@
 import type { NextPage } from 'next';
-import { Typography } from '@mui/material'
+import { Card, CardContent, CardHeader, Grid, Typography } from '@mui/material'
 import Layout from '../components/layouts/Layout';
 
 const HomePage: NextPage = () => {
   return (
-    <Layout title='OpenJira'>
+    <Layout title='Home | OpenJira'>
       <Typography variant='h1' color=''>
-        Hola mundo
+        <Grid container spacing={ 2 }>
+          <Grid item xs={12} sm={4} >
+            <Card sx={{ height: '80vh' }}>
+              <CardHeader title='Pendientes' />
+              <CardContent>
+
+              </CardContent>
+            </Card>
+
+          </Grid>
+          <Grid item xs={12} sm={4} >
+            <Card sx={{ height: '80vh' }}>
+              <CardHeader title='En Progreso' />
+            </Card>
+          </Grid>
+
+          <Grid item xs={12} sm={4} >
+            <Card sx={{ height: '80vh' }}>
+              <CardHeader title='Completados' />
+            </Card>
+          </Grid>
+        </Grid>
       </Typography>
     </Layout>
   );
