@@ -10,8 +10,23 @@ export interface EntriesState {
 const Entries_INITIAL_STATE: EntriesState = {
   entries: [
     {
-      _id: 
-    }
+      _id: uuidv4(),
+      description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facilis delectus? Repellendus dolores temporibus architecto ea aut sapiente, vero, reiciendis veritatis itaque alias in dicta dignissimos nesciunt commodi modi tenetur!',
+      status: 'pending',
+      createdAT: Date.now(),
+    },
+    {
+      _id: uuidv4(),
+      description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facilis delectus? Repellendus dolores temporibus architecto ea aut sapiente, vero, reiciendis veritatis itaque alias in dicta dignissimos nesciunt commodi modi tenetur!',
+      status: 'in-progress',
+      createdAT: Date.now(),
+    },
+    {
+      _id: uuidv4(),
+      description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facilis delectus? Repellendus dolores temporibus architecto ea aut sapiente, vero, reiciendis veritatis itaque alias in dicta dignissimos nesciunt commodi modi tenetur!',
+      status: 'finished',
+      createdAT: Date.now(),
+    },
   ],
 }
 
